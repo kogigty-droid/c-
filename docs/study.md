@@ -27,7 +27,7 @@ public:
     { 
         static Singleton instance; //假设去掉static  会有问题：Singleton实例会在栈上创建
         return instance; 
-    }                              //运行到这个花括号 退出这个函数作用域就会被销毁
+    }                              //运行到这个花括号 退出这个函数作用域就会被销毁   原因是static的生命周期是永久，当我第一次调用这个函数会返回这个Singleton实例，之后所有调用都会返回这个存在的实例
     void Hello() {}
 };
 
