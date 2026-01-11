@@ -23,11 +23,11 @@ class Singleton
 {
 //在get函数内创建静态Singleton实例
 public:
-    static Singleton& Get() 
+    static Singleton& Get()        //尤其这里是返回的引用 那么下面少了stati 将会是打问题
     { 
-        static Singleton instance;
+        static Singleton instance; //假设去掉static  会有问题：Singleton实例会在栈上创建
         return instance; 
-    }
+    }                              //运行到这个花括号 退出这个函数作用域就会被销毁
     void Hello() {}
 };
 
@@ -39,3 +39,5 @@ int main()
     std::cin.get();
 }
 ```
+<img width="429" height="494" alt="image" src="https://github.com/user-attachments/assets/a84d8d43-1c38-46e0-8022-b4e1ef3cdfae" />
+## 会有问题：
