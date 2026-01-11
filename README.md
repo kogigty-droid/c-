@@ -9,5 +9,6 @@ class Singleton {
 // 2. 必须在类外面给它分配"实际的内存空间"
 Singleton* Singleton::s_Instance = nullptr;
 
-![Uploading image.png…]()
+<img width="631" height="194" alt="image" src="https://github.com/user-attachments/assets/ddfd0c49-4899-41f0-a794-fccdc9cbc768" />
+
 
