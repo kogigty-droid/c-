@@ -1,7 +1,9 @@
 ## enums 枚举  只能用整型
 <img width="640" height="741" alt="image" src="https://github.com/user-attachments/assets/482c5a0e-377f-4e00-a3d0-5e3418e70a78" />
+
 在以上情况下，我希望可以定义一种数据类型，使得他的值只能在这三个值中的某一个值，（因为只要在main函数中int value=具体的  那么后面的都没意义了），而且可以以把这些数据组合起来。
 这就是枚举的使用场景了
+
 ```cpp
 enum Example
 {   //声明example为新的数据类型，称为枚举(enumeration);
