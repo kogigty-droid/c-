@@ -39,5 +39,3 @@ int main()
     std::cin.get();
 }
 ```
-<img width="429" height="494" alt="image" src="https://github.com/user-attachments/assets/a84d8d43-1c38-46e0-8022-b4e1ef3cdfae" />
-## 会有问题：
