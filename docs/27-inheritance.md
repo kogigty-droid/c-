@@ -14,7 +14,7 @@
 class Entity
 {
 public:
-    float X,Y;
+    float X,Y;   //定义的X,Y 各4个字节
 
     void Move(float xa,float ya)  //给每个Entity移动的能力
     {
@@ -26,7 +26,7 @@ public:
 class Player : public Entity  //我们想让Player也可以移动  Player不仅是Player类型，他也是Entity类型 也就是说他同时是两种类型
 {
 public:                       //对于Player类来说，任何只要不是private的Entity成员，他都可以访问
-    const char* Name;
+    const char* Name;   //定义的字符串 4个字节
     
     void PrintName()
     {
@@ -37,6 +37,8 @@ public:                       //对于Player类来说，任何只要不是privat
 
 int main()
 {
+    std::cout<<sizeof(Entity)<<std::endl;    //输出结果为8个字节
+    std::cout<<sizeof(Player)<<std::endl;    //输出结果为12个字   4+4+4=12  自己的字符串加上Entity的X，Y。
     Player player; //创建一个player实例
     player.PrintName(); //调用Player类的PrintName函数
     player.Move(5.0f,5.0f); //调用从Entity类继承过来的Move函数
