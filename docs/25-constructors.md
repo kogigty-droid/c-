@@ -45,6 +45,7 @@ int main()
     std::cin.get();
 }
 ```
+</details>
 
 
 ## 如果你不指定构造函数，你仍然有一个构造函数，这叫做默认构造函数（default constructor），是默认就有的。但是，我们仍然可以删除该默认构造函数：
