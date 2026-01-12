@@ -8,6 +8,7 @@
 
 <details>
 <summary>纯虚函数实例代码</summary>
+    
 ```cpp
 #include <iostream>
 #include <string>
