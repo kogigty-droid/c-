@@ -43,6 +43,12 @@ public:
     std::string GetClassName() override { return "Player"; }
 };
 
+class A : public Printable
+{
+public:
+    std::string GetClassName() override { return "A"; }
+};
+
 void PrintName(Entity* entity)
 {
     std::cout<<entity->GetName()<<std::endl;
@@ -67,6 +73,7 @@ int main()
     
     Print(e);
     Print(p);
+    Print(new A()); //没有给对象起名字（匿名对象），直接告诉编译器：“给我 new 一个 A，然后把它的地址直接扔给 Print 函数。”
 
     std::cin.get(); 
 }
