@@ -37,4 +37,4 @@ int main()
     e.Print();    //实例化Entity之后调用Print函数
     std::cin.get();
 }
-
+```
