@@ -23,10 +23,15 @@ public:
     //解决思路：当我们创建Enity对象的时候，能自动运行这个初始化方法就好了————用构造函数，那是一种特殊类型的方法。   
     Entity()    //构造函数：函数名和类名相同，没有返回值
     {
-        X = 0.0f;
-        Y = 0.0f;
     }
-    
+
+    //函数重载：     ————相同的函数名有不同的参数的不同版本函数
+    Entity(float x, float y)   //重载的构造函数  带参数的构造函数
+    {
+        X = x;
+        Y = y;
+    }
+
     void Print()  
     {
     std::cout << X << ", " << Y << std::endl;
@@ -35,7 +40,7 @@ public:
 
 int main()
 {
-    Entity e;   
+    Entity e(10.0f,15.0f);    //这里就可以使用参数来构造Entity
     e.Print();    //实例化Entity之后调用Print函数
     std::cin.get();
 }
@@ -56,3 +61,6 @@ public:
 </pre>
 </details>
 ```
+
+### 也可以通过private：来隐藏构造默认构造函数：
+<img width="695" height="320" alt="image" src="https://github.com/user-attachments/assets/d714a120-d0f3-4808-baa5-2e799b29c22d" />
