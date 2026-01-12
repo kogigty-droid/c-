@@ -5,7 +5,6 @@
 ## 
 <details>
 <summary>结构体 数据类型初始化</summary>
-<pre>
 ```cpp
 //结构体
 #include <iostream>
@@ -44,7 +43,6 @@ int main()
     e.Print();    //实例化Entity之后调用Print函数
     std::cin.get();
 }
-</pre>
 </details>
 ```
 
