@@ -6,7 +6,7 @@
 
 <details>
 <summary>析构函数应用</summary>
-<pre>
+    
 ```cpp
 //结构体
 #include <iostream>
@@ -45,6 +45,6 @@ int main()
     Function(); 
     std::cin.get();
 }
-</pre>
-</details>
 ```
+</details>
+
