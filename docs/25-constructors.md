@@ -59,6 +59,7 @@ public:
     ......
 }
 ```
+</details>
 
 ### 也可以通过private：来隐藏构造默认构造函数：
 <img width="695" height="320" alt="image" src="https://github.com/user-attachments/assets/d714a120-d0f3-4808-baa5-2e799b29c22d" />
