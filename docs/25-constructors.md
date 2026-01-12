@@ -39,10 +39,20 @@ int main()
     e.Print();    //实例化Entity之后调用Print函数
     std::cin.get();
 }
-```
-<pre>
+</pre>
 </details>
-
+```
 
 ## 如果你不指定构造函数，你仍然有一个构造函数，这叫做默认构造函数（default constructor），是默认就有的。但是，我们仍然可以删除该默认构造函数：
-## 
+<details>
+<summary>删除默认构造函数示例</summary>
+<pre>
+```cpp
+class Log{
+public:
+    Log() = delete;  //删除默认构造函数
+    ......
+}
+</pre>
+</details>
+```
