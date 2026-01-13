@@ -36,6 +36,7 @@ int main ()
 ### const 第三中用法： 放在方法名的后面
 <details>
 <summary>const 放在方法名后</summary>
+  
 ```cpp
 #include <iostream>
 #include <string>
@@ -76,8 +77,7 @@ int main ()
 ```
 </details>
 
-
-#### 注：如果要变指针，那么都要加*  如：int a,b; ————> 变成指针: int* a, *b;
+####  注：如果要变指针，那么都要加*  如：int a,b; ————> 变成指针: int* a, *b;
 
 
 
