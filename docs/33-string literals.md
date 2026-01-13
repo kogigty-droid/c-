@@ -1,5 +1,7 @@
 # 字符串字面量 --双引号中的内容
+
 <img width="710" height="310" alt="image" src="https://github.com/user-attachments/assets/5479cdbf-e49e-480a-bf0d-6a0d36aabe7a" />
+
 #### 字符串字面量总是存储在只读内存中
 
 <details>
