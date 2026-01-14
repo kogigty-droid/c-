@@ -7,6 +7,7 @@
 
 #### 空作用域
 <img width="1149" height="566" alt="image" src="https://github.com/user-attachments/assets/650c0c72-a492-48ce-b11f-a198bdab8d56" />
+
 #### 栈
 <img width="1350" height="575" alt="image" src="https://github.com/user-attachments/assets/7c3f77ef-7189-4444-89e8-a7dd58467e0b" />
 
