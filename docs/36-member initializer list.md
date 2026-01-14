@@ -57,3 +57,21 @@ int main()
 </details>
 
 #### 好处--干净易读
+
+#### 别的类也可以作为自己的成员变量
+<img width="893" height="470" alt="image" src="https://github.com/user-attachments/assets/ff0caf8d-9810-454c-9fea-00e7084912c6" />
+<img width="1054" height="330" alt="image" src="https://github.com/user-attachments/assets/471f3d2f-f2c3-4fb4-940b-554dd1dee022" />
+
+#### 初始化成员变量并调用函数的两种写法：
+#### 1.: m_Example(8)     ----直接初始化           这是标准化写法
+过程：编译器直接找到 Example 类中接受 int 参数的构造函数（即 Example(int x)），并在 m_Example 的内存位置上直接调用它。
+
+#### 2.: m_Example(Example(8))  ----拷贝构造        啰嗦复杂
+过程：1）调用 Example(int) 创建临时对象。
+      2）调用 Example(const Example&) 或 Example(Example&&) 复制/移动给成员。
+      3）调用 ~Example() 析构临时对象。
+
+
+
+
+
