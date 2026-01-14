@@ -58,6 +58,7 @@ int main()
 
 <details>
 <summary>堆上分配对象</summary>
+    
 ```cpp
 #include <iostream>
 #include <string>
