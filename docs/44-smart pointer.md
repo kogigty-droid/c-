@@ -1,4 +1,4 @@
-<img width="1200" height="678" alt="image" src="https://github.com/user-attachments/assets/806d4065-4d67-4aa4-82e6-20f9ad59ce19" /># smart pointer 智能指针 std--unique_ptr  std--shared_ptr  std--weak_ptr
+# smart pointer 智能指针 std--unique_ptr  std--shared_ptr  std--weak_ptr
 ### 智能指针就是说当你调用new分配内存的时候，你不用自己去调用。实际上在很多使用智能指针的情况下，甚至不用去调用new。
 #### 智能指针其实就是对原始指针的包装。当你创建一个智能指针，他会调用new 为你分配内存，然后基于你使用的智能指针，分配的内存会在某一时刻自动释放。
 ### 最简单的智能指针 unique_ptr 作用域指针：当这个指针超出作用域时，他就会被销毁，就会调用delete。
