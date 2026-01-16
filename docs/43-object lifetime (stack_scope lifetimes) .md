@@ -98,13 +98,68 @@ int main()
 <img width="984" height="675" alt="image" src="https://github.com/user-attachments/assets/e592fa11-c3a6-4395-b6b8-c04d561e4406" />
 <img width="699" height="405" alt="image" src="https://github.com/user-attachments/assets/6bd5928e-f2be-4ca6-bcaf-fcd2b1688b75" />
 
+<details>
+<summary>智能指针 Scope_Ptr</summary>
+
+```cpp
+#include <iostream>
+#include <string>
+
+class Entity
+{
+public:
+    Entity()
+    {
+        std::cout<<"Created Entity"<<std::endl;
+    }
+
+    ~Entity()
+    {
+        std::cout<<"Destroyed Entity"<<std::endl;
+    }
+};
+
+class ScopePtr
+{
+private:
+    Entity* m_Ptr;   //这是一个指向Entity对象的指针 在 ScopePtr 这个类内部，保存一个 Entity 对象的内存地址 这里仅仅是声明我有这么一个变量而已
+public:
+    ScopePtr (Entity* ptr)   //创建一个构造函数 接受一个指针
+        : m_Ptr(ptr)         //把这个ptr赋值给m_Ptr
+    {
+    }
+
+    ~ScopePtr()           //在析构函数中调用delete删除m_Ptr
+    {
+        delete m_Ptr;      //delete m_Ptr 就可以间接的把Entity这个对象销毁  可以把这块内存释放
+    }
+};
+
+int main()
+{
+    {
+        //希望在跳出作用域时能够自动删除他   可以使用c++标准库中的作用域指针 ScopePtr
+        //注意：凡是在函数内部（比如 main 函数）声明的变量，如果没有用 new 关键字来修饰这个变量本身，它默认就是分配在**栈（Stack）**上的
+        ScopePtr e = new Entity();  //ScopePtr e 声明了一个类型为 ScopePtr 的局部变量 e
+        //ScopePtr e：是栈对象（管理者） new Entity()：是堆对象（被管理者）。
+        
+        Entity* e = new Entity();     
+    }
+    std::cin.get();
+}
+```
+</details>
 
 
 ### 一些知识点
 <img width="1110" height="518" alt="image" src="https://github.com/user-attachments/assets/51a9b281-8a01-4578-8968-2ea7b86d2b55" />
 <img width="979" height="565" alt="image" src="https://github.com/user-attachments/assets/a32e45ae-ccee-44b5-8065-9da0b0ed185e" />
 <img width="930" height="550" alt="image" src="https://github.com/user-attachments/assets/931f6df3-ce04-4878-b21b-28642f520d1d" />
-#### delete m_Ptr; 能清理堆内存，是因为 delete 是一个功能强大的操作符，它不仅通过指针找到了堆内存的地址，还负责触发了清理逻辑（析构函数）和归还逻辑（释放内存）。执行delete m_Ptr的时候，delete操作符很聪明，他找到了这个m_Ptr是一个Entity类型，知道这个指针上住着一个Entity对象，它会立即跳转到堆内存中该对象的地址，并**强制执行**该对象的析构函数 ~Entity()
+
+#### delete m_Ptr; 能清理堆内存，是因为 delete 是一个功能强大的操作符，它不仅通过指针找到了堆内存的地址，还负责触发了清理逻辑（析构函数）和归还逻辑（释放内存）。执行delete m_Ptr的时候，delete操作符很聪明，他找到了这个m_Ptr是一个Entity类型，知道这个指针上住着一个Entity对象，它会立即跳转到堆内存中该对象的地址，并强制执行该对象的析构函数 ~Entity()
+
+#### 应用例子：自动计时器
+##### 一个计时器，加入你想计算在你基准测试范围内的时间，可以写一个timer类，在对象创建构造时开始计时，然后再对象销毁时停止计时，并且打印出计时；函数开头加上一行代码，那么整个作用域就会被计时，不需要手动去停止计时器。一旦超出作用域他就会停止。
 
 
 
