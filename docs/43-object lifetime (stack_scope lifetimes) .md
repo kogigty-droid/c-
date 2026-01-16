@@ -79,7 +79,7 @@ int main()
     
     //法2：在main函数里面创建数组，然后赋值给作用域外的函数变量
     int array[50];
-    CreateArray(array);
+    CreateArray(array);        //数组名“退化” ,隐式转换  数组名array-->“指向第一个元素的指针”
     
     {
         Entity* e = new Entity();
