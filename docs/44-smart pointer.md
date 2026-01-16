@@ -138,4 +138,4 @@ int main()
 
 <img width="1279" height="558" alt="image" src="https://github.com/user-attachments/assets/f8b340fc-6c06-478e-b9ef-194da4797423" />
 
-
+### “知道对象已经死了” 这件事本身，就是 weak_ptr 存在的巨大意义。核心作用主要体现在两个方面：安全地检查存活 和 打破循环引用。
