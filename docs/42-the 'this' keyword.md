@@ -80,7 +80,7 @@ public:
 
     int GetX() const    //这个函数后面加了const 说明不可以修改这个类
     {
-        const Entity& e = *this;
+        const Entity& e = *this;      //加const保证不修改这个类
         return x; 
     }
 };
