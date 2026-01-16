@@ -11,7 +11,9 @@
 
 #### std::unique_ptr<Entity>这个标准类里面就是要求传入一个指针
 
-<img width="1055" height="453" alt="image" src="https://github.com/user-attachments/assets/66e9bdfa-d8f6-4154-b4c0-f78070f0c6d9" />
+<img width="1055" height="453" alt="image" src="https://github.com/user-attachments/assets/66e9bdfa-d8f6-4154-b4c0-f78070f0c6d9" 
+    />
+<img width="1061" height="380" alt="image" src="https://github.com/user-attachments/assets/8dbc518a-e9ee-40bf-930c-0c8f953ae81d" />
 
 <img width="1200" height="678" alt="image" src="https://github.com/user-attachments/assets/61a211cf-f9a3-4f6c-904a-52e6acf4d81b" />
 
