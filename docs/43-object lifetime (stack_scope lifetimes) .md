@@ -4,6 +4,7 @@
 ### 基于栈和基于堆的变量生存周期的区别： 
 #### 基于栈的变量，在我们离开作用域的时候会被销毁，内被被释放；基于堆的不会
 #### 注： 数组即指针： 在 C++ 中，数组名在很多情况下会“退化”为指向该数组第一个元素的指针
+####      凡是在函数内部（比如 main 函数）声明的变量，如果没有用 new 关键字来修饰这个变量本身，它默认就是分配在栈（Stack）上的
 
 ### 局部作用域创建数组的经典错误
 #### 创建一个基于栈的变量，然后返回一个指向他的指针
@@ -88,3 +89,23 @@ int main()
 }
 ```
 </details>
+
+### 在栈上创建东西的一些使用地方： 
+#### 比如利用类的作用域来实现的，像只能指针smart_ptr 或是 作用域指针unique_ptr,这是一个作用域指针 或者像作用域锁
+#### 例如作用域指针，本质上就是一个类，是一个指针的包装器，在构造时在堆上分配指针，在析构时删除指针，可以自动化这个new 和delete 
+
+#### 作用域指针：
+<img width="984" height="675" alt="image" src="https://github.com/user-attachments/assets/e592fa11-c3a6-4395-b6b8-c04d561e4406" />
+<img width="699" height="405" alt="image" src="https://github.com/user-attachments/assets/6bd5928e-f2be-4ca6-bcaf-fcd2b1688b75" />
+
+
+
+### 一些知识点
+<img width="1110" height="518" alt="image" src="https://github.com/user-attachments/assets/51a9b281-8a01-4578-8968-2ea7b86d2b55" />
+<img width="979" height="565" alt="image" src="https://github.com/user-attachments/assets/a32e45ae-ccee-44b5-8065-9da0b0ed185e" />
+<img width="930" height="550" alt="image" src="https://github.com/user-attachments/assets/931f6df3-ce04-4878-b21b-28642f520d1d" />
+#### delete m_Ptr; 能清理堆内存，是因为 delete 是一个功能强大的操作符，它不仅通过指针找到了堆内存的地址，还负责触发了清理逻辑（析构函数）和归还逻辑（释放内存）。执行delete m_Ptr的时候，delete操作符很聪明，他找到了这个m_Ptr是一个Entity类型，知道这个指针上住着一个Entity对象，它会立即跳转到堆内存中该对象的地址，并**强制执行**该对象的析构函数 ~Entity()
+
+
+
+
