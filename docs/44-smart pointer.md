@@ -67,7 +67,7 @@ int main()
 #### 大概过程：我创建了一个shared_ptr,然后copy他创建了另外一个shared_ptr,那么引用计数就是2，当我一个指针die的时候，我的引用计数-1，现在就是一个计数，当我最后一个指针die的时候，我的引用计数回到0，整个就die了
 
 ### unique_ptr不直接调用new 的原因是异常安全，但是在shared_ptr中不直接调用new的原因不一样：
-#### shared_ptr会额外分配一块叫控制块的内存，用来储存引用计数，如果你先创建一个 new Entity(),然后传给shared_ptr的构造函数，那总共机会有两次内存分配，显示new Entity()的内存分配，然后是shared_ptr控制块的内存分配------------因此，使用make_shared 就可以把两者结合起来，效率更高
+#### shared_ptr会额外分配一块叫控制块的内存，用来储存引用计数，如果你先创建一个 new Entity(),然后传给shared_ptr的构造函数，那总共就会有两次内存分配，先是new Entity()的内存分配，然后是shared_ptr控制块的内存分配------------因此，使用make_shared 就可以把两者结合起来，效率更高
 
 <img width="1375" height="681" alt="image" src="https://github.com/user-attachments/assets/6a88b56b-34cf-4bff-b734-146f2b4368a5" />
 
