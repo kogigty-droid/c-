@@ -83,4 +83,28 @@ int main()
 ### delete m_Obj   堆上的内存被销毁的过程
 <img width="986" height="575" alt="image" src="https://github.com/user-attachments/assets/0ec7a197-6d7a-4698-a159-9c9d367d5602" />
 
+### 箭头运算符另外一种用法：
 
+<details>
+<summary>另外一种用法</summary>
+
+```cpp
+//用法2  使用箭头运算符来获得某个成员的偏移量 内存变量    !!!看不懂！！！
+#include<iostream> 
+#include<string>
+
+struct Vector3
+{
+    float x,y,z;    //每个浮点数 4个字节
+};
+
+
+
+int main()
+{
+    int offset = (int)&((Vector3*)nullptr)->x;
+    std::cout << offset << std::endl;
+    std::cin.get();
+}
+```
+</details>
