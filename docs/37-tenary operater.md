@@ -1,8 +1,8 @@
 # tenary operater  三元运算符
 #### 他只是if语句的语法糖
 
-
 <img width="1339" height="394" alt="image" src="https://github.com/user-attachments/assets/48504a8a-97ad-4da5-b94e-502f8063da64" />
+
 #### 注意区分 static 和 const          
 #### static 的变量完全可以被修改，重点是不能别其他cpp文件访问不到
 1.static (静态) 是什么意思？static 只有两个作用：   
