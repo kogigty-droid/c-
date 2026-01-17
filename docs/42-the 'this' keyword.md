@@ -43,7 +43,9 @@ int main()
 </details>
 
 ## 用法2
-### 在类的内部调用一个外部函数，然后这个函数接受一个这个类类型作为参数
+### 在类的内部调用一个外部函数，然后这个函数接受一个这个类类型作为参数    ---- 把“当前正在被创建的这个对象”传给外面的函数
+### 用到 this 的根本原因不是因为“你在内部调用外部”，而是因为：外部那个函数需要访问你的数据，所以你必须把你的地址（this）交给它，它才能找到你。
+
 <img width="1238" height="675" alt="image" src="https://github.com/user-attachments/assets/447d4376-81cb-4eb5-9d1d-7ebb373bbe86" />
 <img width="1198" height="788" alt="image" src="https://github.com/user-attachments/assets/cb6bd5c3-a749-477e-98b7-cbb22ba4d610" />
 
@@ -85,7 +87,7 @@ public:
     }
 };
 
-void PrintEntity(Entity* e)
+void PrintEntity( const Entity& e)
 {
     //Print
 }
@@ -96,3 +98,5 @@ int main()
 }
 ```
 </details>
+
+<img width="745" height="424" alt="image" src="https://github.com/user-attachments/assets/ae547a29-c57d-4935-9158-c9b6fb310861" />
