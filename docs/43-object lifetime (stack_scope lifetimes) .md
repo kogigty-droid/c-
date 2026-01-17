@@ -90,6 +90,8 @@ int main()
 ```
 </details>
 
+<img width="790" height="325" alt="image" src="https://github.com/user-attachments/assets/d78cd5c5-2b49-4f5f-9e44-07dc23b3d373" />
+
 ### 在栈上创建东西的一些使用地方： 
 #### 比如利用类的作用域来实现的，像只能指针smart_ptr 或是 作用域指针unique_ptr,这是一个作用域指针 或者像作用域锁
 #### 例如作用域指针，本质上就是一个类，是一个指针的包装器，在构造时在堆上分配指针，在析构时删除指针，可以自动化这个new 和delete 
