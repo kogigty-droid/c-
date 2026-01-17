@@ -90,6 +90,8 @@ int main()
 ```
 </details>
 
+### 不会遇到因为没有new一块地址导致被释放的原因：
+
 <img width="790" height="325" alt="image" src="https://github.com/user-attachments/assets/d78cd5c5-2b49-4f5f-9e44-07dc23b3d373" />
 
 ### 在栈上创建东西的一些使用地方： 
