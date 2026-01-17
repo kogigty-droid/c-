@@ -41,7 +41,7 @@ int main()
 #### 2.在main函数里面创建数组，然后赋值给作用域外的函数变量
 
 <details>
-<summary>错误记更正后的的代码</summary>
+<summary>错误及更正后的的代码</summary>
 
 ```cpp
 #include <iostream>
