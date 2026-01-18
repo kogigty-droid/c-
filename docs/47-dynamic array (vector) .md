@@ -45,7 +45,7 @@ void Function(const std::vector<Vertex>& vertices)
 int main()
 {
     std::vector<Vertex> vertices;  //动态数组(容器---里面有很多个Vertex)    vertex对象，那么内存分配是一条线上的  但是重新分配和复制的过程比较缓慢
-    vertices.push_back({1,2,3});
+    vertices.push_back({1,2,3});   //往容器的末尾“追加（Append）”新的元素
     vertices.push_back({4,5,6});
 
     Function(vertices);
