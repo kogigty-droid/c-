@@ -39,3 +39,33 @@ else if(score > 80)
                  printf("E\r\n");
 ```
 </details>
+
+### 开关语句
+
+<img width="775" height="234" alt="image" src="https://github.com/user-attachments/assets/8e77edb2-f594-4191-9a28-95b053e2607d" />
+
+<img width="830" height="291" alt="image" src="https://github.com/user-attachments/assets/2ef8d844-9a66-478d-aba2-26ddcadeaf47" />
+
+<details>
+<summary>条件语句嵌套</summary>
+
+```c
+temp = score/10；
+
+switch (temp)
+{
+  case 9: printf("A\r\n");break;
+  case 8: printf("B\r\n");break;
+  case 7: printf("C\r\n");break;
+  case 6: printf("D\r\n");break;
+  default: printf("你考的太烂了")；
+  
+}
+
+```
+</details>
+
+<img width="1071" height="220" alt="image" src="https://github.com/user-attachments/assets/e6551e07-1ec1-4726-8ef8-f1808caf9a78" />
+
+
+
