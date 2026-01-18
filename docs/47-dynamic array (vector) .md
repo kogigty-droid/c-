@@ -5,8 +5,6 @@
 #### vertex对象，那么内存分配是一条线上的  但是调整vector重新分配和复制的过程比较缓慢；指针不同，实际的内存保持不变，你只是正确的保存了指向内存的指针，所以实际的内存保持不变，到了调整大小的时候，他只是副本，即整数，只是实际数据的内存地址，而数据仍然被储存。  
 ###  尽量选择对象，而不是指针！
 
-<img width="425" height="54" alt="image" src="https://github.com/user-attachments/assets/1f0ea8ab-ed7d-4241-9a56-72539622b334" />
-
 #### 一些问题
 
 <img width="1080" height="426" alt="image" src="https://github.com/user-attachments/assets/7139dbce-42b4-4c7d-b619-d8302e60308a" />
@@ -17,3 +15,60 @@
 
 <img width="979" height="450" alt="image" src="https://github.com/user-attachments/assets/b8eaf34f-6a02-44e7-a906-5a161453172a" />
 
+#### 将vertex传递给函数或类或其他东西时，要确保使用的是引用传递他们
+
+<details>
+<summary>动态数组</summary>
+
+```cpp
+#include<iostream>
+#include <string>
+#include<vector>
+
+struct Vertex
+{
+    float x,y,z;
+
+};
+
+std::ostream& operator<< (std::ostream& stream, const Vertex& vertex) 
+{
+    stream << vertex.x << "," << vertex.y << "," << vertex.z;
+    return stream;
+}
+
+void Function(const std::vector<Vertex>& vertices)
+{
+
+}
+
+int main()
+{
+    std::vector<Vertex> vertices;  //动态数组(容器---里面有很多个Vertex)    vertex对象，那么内存分配是一条线上的  但是重新分配和复制的过程比较缓慢
+    vertices.push_back({1,2,3});
+    vertices.push_back({4,5,6});
+
+    Function(vertices);
+
+    for (int i = 0; i < vertices.size(); i++)
+        std::cout << vertices[i] << std::endl; 
+    
+    //单独移除某个vertex
+    vertices.erase(vertices.begin() + 1);     //假如删除第二个元素
+            
+    // for(Vertex v : vertices)
+    //     std::cout << v << std::endl;      //这里实际上是将每个v复制到for循环中，为了避免复制 ，用引 只要有&就不会复制数据
+    
+    for(const Vertex& v : vertices)
+        std::cout << v << std::endl;
+
+    vertices.clear();    //清除vertex列表    数组大小会被置0
+     
+    
+
+    std::cin.get();
+
+}
+
+```
+</details>
