@@ -36,6 +36,6 @@ else if(score > 80)
           else if(score > 60)
                   printf("D\r\n");
                else 
-                 printf("B\r\n");
+                 printf("E\r\n");
 ```
 </details>
