@@ -16,3 +16,17 @@ MDK中集成了编辑器、编译器和链接器，使用MDK和开发板可以�
 
 <img width="698" height="305" alt="image" src="https://github.com/user-attachments/assets/3f998dcc-8e3d-4fb3-a66f-72c455869272" />
 
+### 左移，右移运算符
+
+<img width="830" height="291" alt="image" src="https://github.com/user-attachments/assets/54f34e58-a2d9-4e5f-876b-a83790615d63" />
+
+### 条件语句的嵌套
+
+<details>
+<summary>条件语句嵌套</summary>
+
+```c
+<img width="830" height="291" alt="image" src="https://github.com/user-attachments/assets/2ef8d844-9a66-478d-aba2-26ddcadeaf47" />
+
+```
+</details>
