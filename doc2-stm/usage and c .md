@@ -67,5 +67,41 @@ switch (temp)
 
 <img width="1071" height="220" alt="image" src="https://github.com/user-attachments/assets/e6551e07-1ec1-4726-8ef8-f1808caf9a78" />
 
+### 1.19
+#### 1.给寄存器某个位赋值
+
+<img width="1200" height="579" alt="image" src="https://github.com/user-attachments/assets/2cc06ccb-5019-44a3-8005-cd88e831fac7" />
+
+#### 2.宏定义        ----预处理
+#### 可以提高效率，易改性，可读性 核心是 替换
+
+<img width="978" height="560" alt="image" src="https://github.com/user-attachments/assets/23fb1de2-0e31-4f82-9955-ae09dc2a5167" />
+
+<img width="1274" height="550" alt="image" src="https://github.com/user-attachments/assets/a1e6a7c4-9c07-4c40-be44-dc33d78e9a39" />
+
+#### 条件编译
+
+<img width="1118" height="589" alt="image" src="https://github.com/user-attachments/assets/4e99c1c3-7fd2-4039-8206-446e2aaf5232" />
+
+<img width="1088" height="510" alt="image" src="https://github.com/user-attachments/assets/cd55aef3-5aa1-4936-ae05-e2f912dce442" />
+
+<img width="1130" height="469" alt="image" src="https://github.com/user-attachments/assets/d2eb8138-a81e-4c91-8f87-8ca5ad886003" />
+
+#### 类型别名
+
+<img width="1063" height="511" alt="image" src="https://github.com/user-attachments/assets/4843b017-3589-49ac-9e71-9abff7444145" />
+
+<img width="1039" height="590" alt="image" src="https://github.com/user-attachments/assets/ea31806b-d061-498f-8455-b3865c85e651" />
+
+<img width="1045" height="599" alt="image" src="https://github.com/user-attachments/assets/c70a1ecf-0119-4a6a-9147-c797659705ee" />
+
+<img width="1179" height="471" alt="image" src="https://github.com/user-attachments/assets/5c7a7e0c-bd92-4fff-a0ea-f43d1f606e9f" />
+
+<img width="1249" height="588" alt="image" src="https://github.com/user-attachments/assets/d3f6541e-3b99-44ea-baa0-3f230d5e5612" />
+
+<img width="1069" height="514" alt="image" src="https://github.com/user-attachments/assets/c0169aae-0f3f-485c-a39b-ef28398e7f32" />
+
+<img width="1073" height="591" alt="image" src="https://github.com/user-attachments/assets/4a0f88cc-9bdd-491a-93b0-e8d3a8325257" />
+
 
 
