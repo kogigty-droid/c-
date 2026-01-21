@@ -33,7 +33,7 @@ int main() {
 static bool is_Finished = false;
 void DoWork() {
     using namespace std::literals::chrono_literals; //等待时间的操作可以先using一个命名空间，为 1s 提供作用域
-    while (is_Finished) {
+    while (!is_Finished) {
         std::cout << "hello" << std::endl;
         std::this_thread::sleep_for(1s);    //等待一秒
     }
